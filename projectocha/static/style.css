@@ -1,0 +1,209 @@
+:root {
+    --color-primario: #19bb62;
+    --color-secundario: #4CAF50;
+    --color-error: #ff4d4d;
+    --color-fondo: #f5f5f5;
+    --color-texto: #333;
+    --color-borde: #ddd;
+    --espaciado: 20px;
+    --radio-borde: 5px;
+}
+
+/* estilo general */
+body {
+    font-family: Arial, sans-serif;
+    color: var(--color-texto);
+    background-image: url('https://i.postimg.cc/tCN4cRKM/coffee-9135194-1280.jpg');
+    background-repeat: no-repeat;
+    background-size:  cover;
+    backdrop-filter: blur(10px);
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: var(--espaciado);
+    background-color: white;
+    margin: var(--espaciado);
+    border-radius: var(--radio-borde);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: var(--espaciado);
+}
+
+/* estilo para los encabezados */
+h1 {
+    color: var(--color-primario);
+    border-bottom: 2px solid var(--color-primario);
+    padding-bottom: 10px;
+    margin-bottom: var(--espaciado);
+    font-size: 2rem;
+}
+
+h2 {
+    color: var(--color-secundario);
+    padding-bottom: 10px;
+    margin-bottom: var(--espaciado);
+    font-size: 1.5rem;
+}
+
+/* estilo para las tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--espaciado);
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+table th {
+    background-color: var(--color-secundario);
+    color: white;
+}
+
+table tr:hover {
+    background-color: var(--color-fondo);
+}
+
+/* estilo de los botones */
+button {
+    background-color: var(--color-secundario);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--radio-borde);
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.btn-eliminar {
+    background-color: var(--color-error);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: var(--radio-borde);
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.btn-eliminar:hover {
+    background-color: #cc0000;
+}
+
+#calcularTotal {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--radio-borde);
+    cursor: pointer;
+    font-size: 1em;
+    margin-left: 10px;
+}
+
+.contenedor-botones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.formulario-agregar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: var(--espaciado);
+}
+
+.contenedor-calcular {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+@media (max-width: 768px) {
+    .formulario-agregar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .formulario-agregar input, .formulario-agregar button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .contenedor-calcular {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+#calcularTotal:hover {
+    background-color: #45a049;
+}
+
+/* estilos para el mensaje del precio total */
+#precioTotal {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--color-secundario);
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+/* estilos para mensajes flash */
+.success {
+    color: var(--color-secundario);
+}
+
+.error {
+    color: var(--color-error);
+}
+
+/* estilos para el contenedor de botones */
+.contenedor-botones {
+    display: flex;
+    align-items: center;
+    gap: var(--espaciado);
+    margin-bottom: var(--espaciado);
+}
+
+/* estilos para el formulario de agregar producto */
+.formulario-agregar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* estilos responsivos */
+@media (max-width: 768px) {
+    main {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .contenedor-botones {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #calcularTotal {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}

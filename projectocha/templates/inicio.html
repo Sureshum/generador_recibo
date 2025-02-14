@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Inicio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Generador de recibo</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Información General</h2>
+            <p>aplicacion web que almacena productos y crea un recibo</p>
+            <p>esta pagina fue creada 12/02/2025</p>
+        </section>
+
+        <!-- boton para ir a la pantalla de registro de productos -->
+        <a href="{{ url_for('productos') }}">
+            <button>Ir al Registro de Productos</button>
+        </a>
+    </main>
+
+</body>
+</html>
